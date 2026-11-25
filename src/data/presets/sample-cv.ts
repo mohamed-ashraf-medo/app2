@@ -1,0 +1,286 @@
+import { type CVDocument, DEFAULT_SECTION_ORDER } from "@/types/cv";
+
+export const CLASSIC_FRONTEND_SAMPLE_CV: CVDocument = {
+  id: "cv_sample_classic_frontend",
+  title: "سيرة ذاتية — Front-End Developer (قالب كلاسيكي)",
+  language: "en",
+  templateId: "classic-navy",
+  density: "compact",
+  targetTrackId: "frontend",
+  sectionOrder: [...DEFAULT_SECTION_ORDER],
+  hiddenSections: ["experience"],
+  header: {
+    fullName: "ABDELRAHMAN NAGAH",
+    headline: "Web Designer & Front-End Developer",
+    location: "Cairo, Egypt",
+    phone: "+20 114 274 9972",
+    email: "abdonagah73@gmail.com",
+    linkedin: "https://linkedin.com/in/abdelrahman-mohamed-nagah-24-7-2005-eng",
+    github: "https://github.com/abdonagah73",
+    portfolio: "",
+    extraLinks: [],
+  },
+  summary:
+    "Passionate Web Designer and Front-End Developer dedicated to crafting modern, responsive, and user-centric digital experiences. Skilled in JavaScript (ES6+), TypeScript, React, HTML5, CSS3, Tailwind CSS, and Bootstrap. Experienced in leading team projects, building interactive web applications, circular marketplaces, and accessible academic portals with clean architecture.",
+  skillGroups: [
+    {
+      id: "sg_1",
+      category: "Programming Languages",
+      items: ["JavaScript (ES6+)", "TypeScript", "C++", "Python", "Java"],
+    },
+    {
+      id: "sg_2",
+      category: "Web & Front-End Development",
+      items: [
+        "HTML5",
+        "CSS3",
+        "React",
+        "Bootstrap",
+        "Responsive Web Design",
+        "DOM Manipulation",
+        "CSS Grid & Flexbox",
+      ],
+    },
+    {
+      id: "sg_3",
+      category: "Web Design & Styling",
+      items: [
+        "Modern Web Aesthetics",
+        "Interactive Prototyping",
+        "Accessible Layouts",
+        "Design Systems",
+      ],
+    },
+    {
+      id: "sg_4",
+      category: "Tools & Platforms",
+      items: ["Git", "GitHub", "VS Code", "Chrome DevTools", "Cross-Browser Testing"],
+    },
+  ],
+  projects: [
+    {
+      id: "proj_1",
+      name: "Yom-B-Yom – Daily Productivity & Lifestyle Platform",
+      subtitle: "Team Leader & Front-End Developer",
+      date: "Sept 2026",
+      liveUrl: "https://abdonagah73.github.io/Yom-B-Yom/",
+      repoUrl: "",
+      role: "Team Leader & Front-End Developer",
+      bullets: [
+        "Led a 4-member front-end team and architected the core interface structure across 6 interactive productivity modules.",
+        "Developed the main Home dashboard and interactive Notes workspace integrating To-Do lists, Calendars, and Habit trackers.",
+        "Engineered a responsive cross-device layout achieving 95+ Lighthouse accessibility score using semantic HTML5 and JavaScript DOM APIs.",
+      ],
+      technologies: ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Responsive Web Design"],
+    },
+    {
+      id: "proj_2",
+      name: "LoopTech – Circular Technology Web Marketplace",
+      subtitle: "Founder & Front-End Developer",
+      date: "Aug 2026",
+      liveUrl: "https://abdonagah73.github.io/techloop/",
+      repoUrl: "",
+      role: "Founder & Front-End Developer",
+      bullets: [
+        "Co-designed and built a circular technology marketplace for refurbished electronics in collaboration with Creativa & MCIT (InnovEgypt 2026).",
+        "Implemented catalog browsing, device evaluation workflows, price comparison views, and interactive diagnostic summaries.",
+        "Streamlined registration and user dashboard flows, reducing checkout steps by 35% with clean front-end component architecture.",
+      ],
+      technologies: ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Responsive Architecture"],
+    },
+    {
+      id: "proj_3",
+      name: "Future Engineers Hub – Academic Portal (HNU)",
+      subtitle: "Front-End Developer",
+      date: "Apr 2026",
+      liveUrl: "https://abdonagah73.github.io/HNU/",
+      repoUrl: "",
+      role: "Front-End Developer",
+      bullets: [
+        "Built an organized academic resource portal serving 500+ engineering students with study materials, e-books, and department tracks.",
+        "Structured accessible semantic page layouts and keyboard-friendly navigation for university portal links.",
+      ],
+      technologies: ["JavaScript", "HTML5", "CSS3", "Git", "GitHub"],
+    },
+  ],
+  experience: [],
+  education: [
+    {
+      id: "edu_1",
+      degree: "Bachelor of Engineering – Intelligent Systems Engineering",
+      institution: "Helwan National University (HNU)",
+      startDate: "2023",
+      endDate: "Present",
+      gpa: "",
+      details: "",
+    },
+  ],
+  certifications: [
+    {
+      id: "cert_1",
+      title: "Web Design Summer Training Certification",
+      issuer: "National Telecommunication Institute (NTI)",
+      date: "Sept 2026",
+      credentialUrl: "",
+    },
+    {
+      id: "cert_2",
+      title: "InnovEgypt 2026 Innovation & Entrepreneurship Program",
+      issuer: "MCIT & TIEC / Creativa",
+      date: "2026",
+      credentialUrl: "",
+    },
+    {
+      id: "cert_3",
+      title: "Google Build with AI – Masr Edition",
+      issuer: "Google & ITI",
+      date: "2026",
+      credentialUrl: "",
+    },
+    {
+      id: "cert_4",
+      title: "Skill-Up AI & Business Program",
+      issuer: "Microsoft Egypt",
+      date: "2026",
+      credentialUrl: "",
+    },
+  ],
+  languages: [
+    { id: "lang_1", name: "Arabic", proficiency: "Native Speaker" },
+    { id: "lang_2", name: "English", proficiency: "Intermediate (B1)" },
+  ],
+  customSections: [],
+  isPublic: false,
+  updatedAt: "2026-11-25T14:00:00.000Z",
+};
+
+export const ARABIC_SAMPLE_CV: CVDocument = {
+  id: "cv_sample_arabic_backend",
+  title: "سيرة ذاتية عربية — مطور Back-End",
+  language: "ar",
+  templateId: "classic-navy",
+  density: "standard",
+  targetTrackId: "backend",
+  sectionOrder: [...DEFAULT_SECTION_ORDER],
+  hiddenSections: [],
+  header: {
+    fullName: "أحمد محمود علي",
+    headline: "مهندس برمجيات ومطور Back-End",
+    location: "القاهرة، مصر",
+    phone: "+20 100 555 1234",
+    email: "ahmed.backend@example.com",
+    linkedin: "https://linkedin.com/in/ahmed-backend-dev",
+    github: "https://github.com/ahmed-backend",
+    portfolio: "",
+    extraLinks: [],
+  },
+  summary:
+    "مطور Back-End متخصص في بناء واجهات برمجة تطبيقات RESTful آمنة وقابلة للتوسع باستخدام Node.js وTypeScript وPostgreSQL. خبرة في تصميم قواعد البيانات، تحسين الأداء عبر Redis، وتطبيق اختبارات تلقائية وخطوط نشر CI/CD.",
+  skillGroups: [
+    {
+      id: "asg_1",
+      category: "اللغات وأطر العمل",
+      items: ["Node.js", "TypeScript", "Express.js", "NestJS", "Python"],
+    },
+    {
+      id: "asg_2",
+      category: "قواعد البيانات والتخزين المؤقت",
+      items: ["PostgreSQL", "MongoDB", "Prisma ORM", "Redis"],
+    },
+    {
+      id: "asg_3",
+      category: "الأمان والبنية التحتية",
+      items: ["JWT", "OAuth 2.0", "Docker", "GitHub Actions", "REST APIs"],
+    },
+  ],
+  projects: [
+    {
+      id: "aproj_1",
+      name: "منصة إدارة الطلبات والفواتير السحابية",
+      subtitle: "مطور Back-End رئيسي",
+      date: "2026",
+      liveUrl: "https://api-orders.example.com",
+      repoUrl: "https://github.com/ahmed-backend/orders-api",
+      role: "Back-End Developer",
+      bullets: [
+        "طوّرت واجهة برمجة REST API باستخدام Node.js وPostgreSQL تخدم أكثر من 15,000 طلب يومياً بزمن استجابة أقل من 120ms.",
+        "طبّقت طبقة تخزين مؤقت بـ Redis ونظام صلاحيات RBAC مع JWT مما خفّض ضغط قاعدة البيانات بنسبة 42%.",
+      ],
+      technologies: ["Node.js", "TypeScript", "PostgreSQL", "Redis", "Docker"],
+    },
+  ],
+  experience: [
+    {
+      id: "aexp_1",
+      role: "متدرب تطوير Back-End",
+      company: "شركة التقنية الرقمية",
+      location: "القاهرة، مصر",
+      startDate: "يونيو 2025",
+      endDate: "أغسطس 2025",
+      isCurrent: false,
+      bullets: [
+        "صمّمت 12 نقطة نهاية API مع توثيق OpenAPI واختبارات وحدة تغطي 85% من مسارات الأعمال.",
+      ],
+    },
+  ],
+  education: [
+    {
+      id: "aedu_1",
+      degree: "بكالوريوس علوم الحاسب ونظم المعلومات",
+      institution: "جامعة القاهرة",
+      startDate: "2022",
+      endDate: "2026",
+      gpa: "3.6 / 4.0",
+      details: "",
+    },
+  ],
+  certifications: [
+    {
+      id: "acert_1",
+      title: "شهادة تطوير الخوادم وقواعد البيانات",
+      issuer: "معهد تكنولوجيا المعلومات (ITI)",
+      date: "2025",
+      credentialUrl: "",
+    },
+  ],
+  languages: [
+    { id: "alang_1", name: "العربية", proficiency: "اللغة الأم" },
+    { id: "alang_2", name: "الإنجليزية", proficiency: "جيد جداً (B2)" },
+  ],
+  customSections: [],
+  isPublic: false,
+  updatedAt: "2026-11-25T14:00:00.000Z",
+};
+
+export const CUSTOM_SECTION_PRESETS = [
+  {
+    key: "volunteering",
+    titleEn: "VOLUNTEERING & LEADERSHIP",
+    titleAr: "العمل التطوعي والقيادة",
+    displayMode: "entries" as const,
+  },
+  {
+    key: "awards",
+    titleEn: "AWARDS & HACKATHONS",
+    titleAr: "الجوائز والهاكاثونات",
+    displayMode: "bullets" as const,
+  },
+  {
+    key: "publications",
+    titleEn: "PUBLICATIONS & RESEARCH",
+    titleAr: "الأبحاث والمنشورات",
+    displayMode: "entries" as const,
+  },
+  {
+    key: "opensource",
+    titleEn: "OPEN SOURCE CONTRIBUTIONS",
+    titleAr: "المساهمات مفتوحة المصدر",
+    displayMode: "bullets" as const,
+  },
+  {
+    key: "soft-skills",
+    titleEn: "CORE COMPETENCIES & SOFT SKILLS",
+    titleAr: "المهارات الشخصية والقيادية",
+    displayMode: "bullets" as const,
+  },
+];
