@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-canvas: #f6f9fc;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #eef3f8;
+  --bg-brand-navy: #0d253d;
+  --text-primary: #0d253d;
+  --text-secondary: #273951;
+  --text-muted: #52637a;
+  --border-hairline: #e3e8ee;
+  --border-input: #6e86a0;
+  --accent-solid: #533afd;
+  --accent-hover: #4434d4;
+  --accent-on-solid: #ffffff;
+  --accent-soft-bg: #ece9ff;
+  --accent-soft-text: #3d2ec4;
+  --status-success-bg: #d1fae5;
+  --status-success-text: #065f46;
+  --status-warning-bg: #fef3c7;
+  --status-warning-text: #92400e;
+  --status-danger-bg: #ffe4e6;
+  --status-danger-text: #9f1239;
+  --shadow-card: 0 1px 3px rgba(0, 55, 112, 0.08);
+  --shadow-sheet: 0 12px 32px rgba(0, 55, 112, 0.12), 0 2px 6px rgba(0, 55, 112, 0.05);
+}
+
+.dark {
+  --bg-canvas: #090e1a;
+  --bg-surface: #111827;
+  --bg-surface-subtle: #1a2335;
+  --bg-brand-navy: #131c31;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-hairline: #243045;
+  --border-input: #64748b;
+  --accent-solid: #533afd;
+  --accent-hover: #665efd;
+  --accent-on-solid: #ffffff;
+  --accent-soft-bg: #232056;
+  --accent-soft-text: #a5b4fc;
+  --status-success-bg: #064e3b;
+  --status-success-text: #6ee7b7;
+  --status-warning-bg: #451a03;
+  --status-warning-text: #fcd34d;
+  --status-danger-bg: #4c0519;
+  --status-danger-text: #fda4af;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-sheet: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+
+@theme inline {
+  --font-sans: var(--font-arabic), var(--font-latin), system-ui, sans-serif;
+  --font-latin: var(--font-latin), system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), ui-monospace, monospace;
+}
+
+html {
+  scroll-padding-block-start: 76px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-arabic), var(--font-latin), system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-mesh-bg {
+  background-color: var(--bg-canvas);
+  background-image:
+    radial-gradient(60% 55% at 15% 10%, rgba(83, 58, 253, 0.14) 0%, transparent 65%),
+    radial-gradient(50% 45% at 85% 5%, rgba(234, 34, 97, 0.09) 0%, transparent 60%),
+    radial-gradient(45% 40% at 50% 20%, rgba(14, 165, 233, 0.09) 0%, transparent 60%);
+}
+
+.dark .hero-mesh-bg {
+  background-color: var(--bg-canvas);
+  background-image:
+    radial-gradient(60% 50% at 20% 0%, rgba(83, 58, 253, 0.22) 0%, transparent 65%),
+    radial-gradient(45% 40% at 85% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-solid);
+  outline-offset: 2px;
+}
+
+.scroll-contain {
+  overscroll-behavior: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Isolated ATS-Safe A4 Vector Print Stylesheet */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  #cv-print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    margin: 0 !important;
+    transform: none !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  #cv-print-sheet a {
+    color: #1d4ed8 !important;
+    text-decoration: underline !important;
+  }
+
+  .cv-slot-active {
+    outline: none !important;
+    background: transparent !important;
+  }
+}

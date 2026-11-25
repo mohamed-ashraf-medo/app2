@@ -1,2 +1,41 @@
-# app2
-MasarCV (مسار CV) — Arabic RTL ATS CV Builder, Interactive Career Roadmap &amp; Job Description Analyzer
+# مسار CV (MasarCV) — ATS CV Builder & Career Roadmap Analyzer
+
+منصة عربية متكاملة (RTL) لبناء السير الذاتية المتوافقة مع أنظمة الـ ATS جزءاً بجزء، مع محلل ATS شفاف، وخارطة طريق تفاعلية مستوحاة من `roadmap.sh`، ومطابق وصف الوظيفة (Job Description Matcher)، واستيراد ملفات PDF الحالية، ومزامنة سحابية متعددة النسخ عبر Firebase.
+
+## المزايا الرئيسية
+
+- **استوديو بناء الـ CV (`/studio`):**
+  - محرر مقسّم لأقسام واضحة (`Header`, `Summary`, `Skills`, `Projects`, `Experience`, `Education`, `Certifications`, `Languages`) + **أقسام مخصصة حرة** لأي إضافة أو تخصص (تطوع، جوائز، هاكاثونات، أبحاث، إلخ) مع إعادة ترتيب وإظهار/إخفاء.
+  - معاينة حية لورقة A4 بـ 3 قوالب ATS عمود واحد (`Classic Navy`, `Modern Indigo`, `Compact Tech`)، وتبديل فوري للغة الـ CV بين الإنجليزية (LTR) والعربية (RTL).
+  - **مراقب امتلاء الصفحة الذكي (Smart 1-Page Fit)** ينبّه فوراً عند تجاوز الصفحة الأولى بأسطر قليلة مع زر ضبط تلقائي لكثافة «مضغوط».
+  - تصدير **PDF متجهي نصّي (Vector Text + Clickable Links)**، طباعة A4 عالية الدقة، وتصدير/استيراد JSON وPDF.
+- **10 مسارات ATS جاهزة:**
+  - `Front-End`, `Back-End`, `Full-Stack`, `Software Engineering`, `Mobile`, `AI / ML / Data`, `DevOps / Cloud`, `UI/UX`, `QA & Security` + **مسار مخصص لأي مجال آخر (`Custom`)** مع ملخصات جاهزة وبنك مهارات وجمل إنجاز بأفعال قوية.
+- **محلل ATS ومطابق وصف الوظيفة (`/analyzer`):**
+  - تقييم شفاف من 100 عبر 4 محاور (الهيكل 25 + الكلمات المفتاحية 35 + الصياغة والأثر 25 + الاكتمال 15) مع روابط إصلاح مباشرة لكل قسم.
+  - مقارنة فورية مع أي وصف وظيفة إنجليزي أو عربي، محاكاة قراءة روبوت ATS النصية، ورفع ملف PDF حالي لاستخراج أقسامه محلياً داخل المتصفح.
+- **خارطة الطريق التفاعلية (`/roadmap`):**
+  - خريطة مراحل ومهارات تقارن سيرتك الذاتية بكل مهارة: **مُثبَتة في مشاريعك** / **مذكورة وتحتاج مشروع** / **ناقصة (خطوتك القادمة)** مع أفكار مشاريع وجمل ATS جاهزة وإضافة بنقرة واحدة.
+- **لوحة ملفاتي والمزامنة السحابية (`/dashboard` و `/cv/[shareId]`):**
+  - وضع ضيف فوري بدون تسجيل دخول (`localStorage`) + ترحيل تلقائي لـ Firebase Auth & Firestore عند تسجيل الدخول + روابط مشاركة عامة قابلة للتفعيل والإيقاف.
+
+## التشغيل المحلي
+
+```bash
+npm install
+cp .env.example .env.local
+npm run dev
+```
+
+### تفعيل Firebase (اختياري — المنصة تعمل محلياً بدونه)
+1. أنشئ مشروعاً في Firebase Console وفعّل **Authentication** (`Google` و `Email/Password`) و **Cloud Firestore**.
+2. انسخ القيم إلى `.env.local` وفق `.env.example`.
+3. انشر قواعد الأمان المرفقة في `firestore.rules`.
+
+## أوامر التحقق
+
+```bash
+npm test          # اختبارات Vitest (الوحدة والمكونات)
+npm run typecheck # فحص TypeScript الصارم
+npm run build     # بناء الإنتاج Next.js
+```

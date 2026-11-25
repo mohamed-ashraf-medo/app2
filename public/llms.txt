@@ -1,0 +1,9 @@
+# MasarCV (مسار CV)
+
+> Arabic RTL ATS CV Builder, Interactive Career Roadmap Analyzer, and Job Description Matcher.
+
+## Key Capabilities
+- **Split-Screen ATS CV Builder (`/studio`):** Structured section editors (Header, Summary, Categorized Skills, Featured Projects, Experience, Education, Certifications, Languages, plus unlimited Custom Sections) synced live to an A4 single-column ATS preview in English (LTR) or Arabic (RTL) with Smart 1-Page Fit detection and vector PDF export.
+- **ATS & Job Description Analyzer (`/analyzer`):** Deterministic 4-pillar ATS score (Format, Keywords, Impact & Action Verbs, Completeness), plain-text ATS robot preview, bilingual Job Description matcher, and browser-side PDF CV importer.
+- **Interactive Career Roadmap (`/roadmap`):** Visual `roadmap.sh`-style skill tree across 9 ready-made tech tracks (Front-End, Back-End, Full-Stack, Software Engineering, Mobile, AI/Data, DevOps, UI/UX, QA & Security) plus a Custom Universal track, showing Proven / Mentioned / Missing skill status against the user's active CV.
+- **Multi-CV Cloud Sync (`/dashboard`):** Guest local mode with automatic migration to Firebase Auth & Firestore and opt-in public share links (`/cv/[shareId]`).

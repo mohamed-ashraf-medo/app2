@@ -1,0 +1,21 @@
+# Secrets & environment variables
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies & build outputs
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Local reference PDF & OS files
+*.log
+.DS_Store
+Thumbs.db
+Abdelrahman_Nagah_CV.pdf
